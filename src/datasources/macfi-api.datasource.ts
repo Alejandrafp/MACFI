@@ -4,11 +4,11 @@ import {juggler} from '@loopback/repository';
 const config = {
   name: 'macfiApi',
   connector: 'mssql',
-  url: 'mssql://mfunez:Inter2022.@localhost/macfi',
-  host: 'localhost/macfi',
+  url: 'mssql://user:12345678@209.145.58.16/macfi',
+  host: '209.145.58.16',
   port: 1433,
-  user: 'mfunez',
-  password: 'Inter2022.',
+  user: 'user',
+  password: '12345678',
   database: 'macfi'
 };
 
