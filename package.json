@@ -56,6 +56,7 @@
     "@loopback/rest-explorer": "^4.1.1",
     "@loopback/service-proxy": "^4.1.1",
     "loopback-connector-mssql": "^3.8.0",
+    "loopback-sdk-angular-cli": "^3.3.1",
     "tslib": "^2.0.0"
   },
   "devDependencies": {
