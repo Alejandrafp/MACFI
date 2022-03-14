@@ -9,7 +9,7 @@ export class DepreciacionRepository extends DefaultCrudRepository<
   DepreciacionRelations
 > {
   constructor(
-    @inject('datasources.macfiApi') dataSource: MacfiApiDataSource,
+    @inject('datasources.macfi') dataSource: MacfiApiDataSource,
   ) {
     super(Depreciacion, dataSource);
   }

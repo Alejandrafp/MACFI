@@ -9,7 +9,7 @@ export class EmpleadosRepository extends DefaultCrudRepository<
   EmpleadosRelations
 > {
   constructor(
-    @inject('datasources.macfiApi') dataSource: MacfiApiDataSource,
+    @inject('datasources.macfi') dataSource: MacfiApiDataSource,
   ) {
     super(Empleados, dataSource);
   }

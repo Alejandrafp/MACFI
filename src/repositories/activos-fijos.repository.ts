@@ -9,7 +9,7 @@ export class ActivosFijosRepository extends DefaultCrudRepository<
   ActivosFijosRelations
 > {
   constructor(
-    @inject('datasources.macfiApi') dataSource: MacfiApiDataSource,
+    @inject('datasources.macfi') dataSource: MacfiApiDataSource,
   ) {
     super(ActivosFijos, dataSource);
   }

@@ -2,13 +2,13 @@ import {inject, lifeCycleObserver, LifeCycleObserver} from '@loopback/core';
 import {juggler} from '@loopback/repository';
 
 const config = {
-  name: 'macfiApi',
-  connector: 'mssql',
-  url: 'mssql://user:12345678@209.145.58.16/macfi',
-  host: '209.145.58.16',
-  port: 1433,
-  user: 'user',
-  password: '12345678',
+  name: 'macfi',
+  connector: 'mongodb',
+  url: 'mongodb+srv://mafp:macfi1@cluster0.gmgh0.mongodb.net/macfi',
+  host: 'cluster0.gmgh0.mongodb.net',
+  port: 27018,
+  user: 'mafp',
+  password: 'macfi1',
   database: 'macfi'
 };
 
@@ -19,11 +19,11 @@ const config = {
 @lifeCycleObserver('datasource')
 export class MacfiApiDataSource extends juggler.DataSource
   implements LifeCycleObserver {
-  static dataSourceName = 'macfiApi';
+  static dataSourceName = 'macfi';
   static readonly defaultConfig = config;
 
   constructor(
-    @inject('datasources.config.macfiApi', {optional: true})
+    @inject('datasources.config.macfi', {optional: true})
     dsConfig: object = config,
   ) {
     super(dsConfig);

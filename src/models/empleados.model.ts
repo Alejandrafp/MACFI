@@ -28,6 +28,10 @@ export class Empleados extends Entity {
   })
   ubicacion?: string;
 
+  @property({
+    type: 'string',
+  })
+  otro?: string;
 
   constructor(data?: Partial<Empleados>) {
     super(data);

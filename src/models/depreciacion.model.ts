@@ -17,12 +17,19 @@ export class Depreciacion extends Entity {
   @property({
     type: 'number',
   })
-  porcentajedepreciacion?: number;
+  vidautil?: number;
+
+  @property({
+    type: 'number',
+  })
+  depreciacionmensual?: number;
+
 
   @property({
     type: 'number',
   })
   valoractual?: number;
+
 
   @property({
     type: 'number',
@@ -32,7 +39,27 @@ export class Depreciacion extends Entity {
   @property({
     type: 'date',
   })
-  fecha?: string;
+  fechaadquisicion?: string;
+
+  @property({
+    type: 'string',
+  })
+  comentario?: string;
+
+  @property({
+    type: 'number',
+  })
+  depreciacionanual?: number;
+
+  @property({
+    type: 'string',
+  })
+  descripcion?: string;
+
+  @property({
+    type: 'string',
+  })
+  metodo?: string;
 
 
   constructor(data?: Partial<Depreciacion>) {

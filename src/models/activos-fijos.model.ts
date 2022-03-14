@@ -42,17 +42,32 @@ export class ActivosFijos extends Entity {
   @property({
     type: 'number',
   })
-  ValorActual?: number;
+  VidaUtil?: number;
 
   @property({
     type: 'number',
   })
-  PorcentajeDepreciacion?: number;
+  DepreciacionAnual?: number;
 
   @property({
-    type: 'object',
+    type: 'number',
   })
-  Img?: object;
+  DepreciacionMensual?: number;
+
+  @property({
+    type: 'number',
+  })
+  ValorActual?: number;
+
+  @property({
+    type: 'string',
+  })
+  Metodo?: string;
+
+  @property({
+    type: 'string',
+  })
+  Clasificacion?: string;
 
 
   constructor(data?: Partial<ActivosFijos>) {
