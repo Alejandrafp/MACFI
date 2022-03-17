@@ -1,0 +1,2624 @@
+
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "macfi",
+    "version": "0.0.1",
+    "description": "macfi",
+    "contact": {
+      "name": "alejandrafp",
+      "email": "44504798+Alejandrafp@users.noreply.github.com"
+    }
+  },
+  "paths": {
+    "/activosfijos/count": {
+      "get": {
+        "x-controller-name": "ActivosfijosController",
+        "x-operation-name": "count",
+        "tags": [
+          "ActivosfijosController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Activosfijos model count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Activosfijos.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Activosfijos>"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "ActivosfijosController.count"
+      }
+    },
+    "/activosfijos/{id}": {
+      "put": {
+        "x-controller-name": "ActivosfijosController",
+        "x-operation-name": "replaceById",
+        "tags": [
+          "ActivosfijosController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Activosfijos PUT success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Activosfijos"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "ActivosfijosController.replaceById"
+      },
+      "patch": {
+        "x-controller-name": "ActivosfijosController",
+        "x-operation-name": "updateById",
+        "tags": [
+          "ActivosfijosController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Activosfijos PATCH success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActivosfijosPartial"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "ActivosfijosController.updateById"
+      },
+      "get": {
+        "x-controller-name": "ActivosfijosController",
+        "x-operation-name": "findById",
+        "tags": [
+          "ActivosfijosController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Activosfijos model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActivosfijosWithRelations"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Activosfijos.Filter"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "ActivosfijosController.findById"
+      },
+      "delete": {
+        "x-controller-name": "ActivosfijosController",
+        "x-operation-name": "deleteById",
+        "tags": [
+          "ActivosfijosController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Activosfijos DELETE success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "operationId": "ActivosfijosController.deleteById"
+      }
+    },
+    "/activosfijos": {
+      "post": {
+        "x-controller-name": "ActivosfijosController",
+        "x-operation-name": "create",
+        "tags": [
+          "ActivosfijosController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Activosfijos model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Activosfijos"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewActivosfijos"
+              }
+            }
+          }
+        },
+        "operationId": "ActivosfijosController.create"
+      },
+      "patch": {
+        "x-controller-name": "ActivosfijosController",
+        "x-operation-name": "updateAll",
+        "tags": [
+          "ActivosfijosController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Activosfijos PATCH success count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Activosfijos.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Activosfijos>"
+                }
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActivosfijosPartial"
+              }
+            }
+          }
+        },
+        "operationId": "ActivosfijosController.updateAll"
+      },
+      "get": {
+        "x-controller-name": "ActivosfijosController",
+        "x-operation-name": "find",
+        "tags": [
+          "ActivosfijosController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of Activosfijos model instances",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ActivosfijosWithRelations"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Activosfijos.Filter1"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "ActivosfijosController.find"
+      }
+    },
+    "/depreciacions/count": {
+      "get": {
+        "x-controller-name": "DepreciacionController",
+        "x-operation-name": "count",
+        "tags": [
+          "DepreciacionController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Depreciacion model count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Depreciacion.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Depreciacion>"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "DepreciacionController.count"
+      }
+    },
+    "/depreciacions/{id}/activosfijos": {
+      "get": {
+        "x-controller-name": "DepreciacionActivosfijosController",
+        "x-operation-name": "getActivosfijos",
+        "tags": [
+          "DepreciacionActivosfijosController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Activosfijos belonging to Depreciacion",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Activosfijos"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "operationId": "DepreciacionActivosfijosController.getActivosfijos"
+      }
+    },
+    "/depreciacions/{id}": {
+      "put": {
+        "x-controller-name": "DepreciacionController",
+        "x-operation-name": "replaceById",
+        "tags": [
+          "DepreciacionController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Depreciacion PUT success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Depreciacion"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "DepreciacionController.replaceById"
+      },
+      "patch": {
+        "x-controller-name": "DepreciacionController",
+        "x-operation-name": "updateById",
+        "tags": [
+          "DepreciacionController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Depreciacion PATCH success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DepreciacionPartial"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "DepreciacionController.updateById"
+      },
+      "get": {
+        "x-controller-name": "DepreciacionController",
+        "x-operation-name": "findById",
+        "tags": [
+          "DepreciacionController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Depreciacion model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DepreciacionWithRelations"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Depreciacion.Filter"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "DepreciacionController.findById"
+      },
+      "delete": {
+        "x-controller-name": "DepreciacionController",
+        "x-operation-name": "deleteById",
+        "tags": [
+          "DepreciacionController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Depreciacion DELETE success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "operationId": "DepreciacionController.deleteById"
+      }
+    },
+    "/depreciacions": {
+      "post": {
+        "x-controller-name": "DepreciacionController",
+        "x-operation-name": "create",
+        "tags": [
+          "DepreciacionController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Depreciacion model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Depreciacion"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewDepreciacion"
+              }
+            }
+          }
+        },
+        "operationId": "DepreciacionController.create"
+      },
+      "patch": {
+        "x-controller-name": "DepreciacionController",
+        "x-operation-name": "updateAll",
+        "tags": [
+          "DepreciacionController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Depreciacion PATCH success count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Depreciacion.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Depreciacion>"
+                }
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DepreciacionPartial"
+              }
+            }
+          }
+        },
+        "operationId": "DepreciacionController.updateAll"
+      },
+      "get": {
+        "x-controller-name": "DepreciacionController",
+        "x-operation-name": "find",
+        "tags": [
+          "DepreciacionController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of Depreciacion model instances",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DepreciacionWithRelations"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Depreciacion.Filter1"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "DepreciacionController.find"
+      }
+    },
+    "/empleados/count": {
+      "get": {
+        "x-controller-name": "EmpleadoController",
+        "x-operation-name": "count",
+        "tags": [
+          "EmpleadoController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Empleados model count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Empleados.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Empleados>"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "EmpleadoController.count"
+      }
+    },
+    "/empleados/{id}/activosfijos": {
+      "post": {
+        "x-controller-name": "EmpleadosActivosfijosController",
+        "x-operation-name": "create",
+        "tags": [
+          "EmpleadosActivosfijosController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Empleados model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Activosfijos"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewActivosfijosInEmpleados"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "EmpleadosActivosfijosController.create"
+      },
+      "patch": {
+        "x-controller-name": "EmpleadosActivosfijosController",
+        "x-operation-name": "patch",
+        "tags": [
+          "EmpleadosActivosfijosController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Empleados.Activosfijos PATCH success count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Activosfijos.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Activosfijos>"
+                }
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActivosfijosPartial"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "EmpleadosActivosfijosController.patch"
+      },
+      "get": {
+        "x-controller-name": "EmpleadosActivosfijosController",
+        "x-operation-name": "find",
+        "tags": [
+          "EmpleadosActivosfijosController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of Empleados has many Activosfijos",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Activosfijos"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "EmpleadosActivosfijosController.find"
+      },
+      "delete": {
+        "x-controller-name": "EmpleadosActivosfijosController",
+        "x-operation-name": "delete",
+        "tags": [
+          "EmpleadosActivosfijosController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Empleados.Activosfijos DELETE success count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Activosfijos.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Activosfijos>"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "EmpleadosActivosfijosController.delete"
+      }
+    },
+    "/empleados/{id}": {
+      "put": {
+        "x-controller-name": "EmpleadoController",
+        "x-operation-name": "replaceById",
+        "tags": [
+          "EmpleadoController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Empleados PUT success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Empleados"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "EmpleadoController.replaceById"
+      },
+      "patch": {
+        "x-controller-name": "EmpleadoController",
+        "x-operation-name": "updateById",
+        "tags": [
+          "EmpleadoController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Empleados PATCH success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmpleadosPartial"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "EmpleadoController.updateById"
+      },
+      "get": {
+        "x-controller-name": "EmpleadoController",
+        "x-operation-name": "findById",
+        "tags": [
+          "EmpleadoController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Empleados model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmpleadosWithRelations"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Empleados.Filter"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "EmpleadoController.findById"
+      },
+      "delete": {
+        "x-controller-name": "EmpleadoController",
+        "x-operation-name": "deleteById",
+        "tags": [
+          "EmpleadoController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Empleados DELETE success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "operationId": "EmpleadoController.deleteById"
+      }
+    },
+    "/empleados": {
+      "post": {
+        "x-controller-name": "EmpleadoController",
+        "x-operation-name": "create",
+        "tags": [
+          "EmpleadoController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Empleados model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Empleados"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewEmpleados"
+              }
+            }
+          }
+        },
+        "operationId": "EmpleadoController.create"
+      },
+      "patch": {
+        "x-controller-name": "EmpleadoController",
+        "x-operation-name": "updateAll",
+        "tags": [
+          "EmpleadoController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Empleados PATCH success count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Empleados.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<Empleados>"
+                }
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmpleadosPartial"
+              }
+            }
+          }
+        },
+        "operationId": "EmpleadoController.updateAll"
+      },
+      "get": {
+        "x-controller-name": "EmpleadoController",
+        "x-operation-name": "find",
+        "tags": [
+          "EmpleadoController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of Empleados model instances",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EmpleadosWithRelations"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Empleados.Filter1"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "EmpleadoController.find"
+      }
+    },
+    "/ping": {
+      "get": {
+        "x-controller-name": "PingController",
+        "x-operation-name": "ping",
+        "tags": [
+          "PingController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Ping Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PingResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PingController.ping"
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "/"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "Activosfijos": {
+        "title": "Activosfijos",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "descripcion": {
+            "type": "string"
+          },
+          "valorinicial": {
+            "type": "number"
+          },
+          "estado": {
+            "type": "boolean"
+          },
+          "ubicacion": {
+            "type": "string"
+          },
+          "empleadoasignado": {
+            "type": "string"
+          },
+          "fechaadquisicion": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "vidautil": {
+            "type": "number"
+          },
+          "depreciacionanual": {
+            "type": "number"
+          },
+          "depreciacionmensual": {
+            "type": "number"
+          },
+          "valoractual": {
+            "type": "number"
+          },
+          "metodo": {
+            "type": "string"
+          },
+          "clasificacion": {
+            "type": "string"
+          },
+          "empleadosId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "descripcion",
+          "valorinicial"
+        ],
+        "additionalProperties": false
+      },
+      "NewActivosfijos": {
+        "title": "NewActivosfijos",
+        "type": "object",
+        "description": "(tsType: Activosfijos, schemaOptions: { title: 'NewActivosfijos' })",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "descripcion": {
+            "type": "string"
+          },
+          "valorinicial": {
+            "type": "number"
+          },
+          "estado": {
+            "type": "boolean"
+          },
+          "ubicacion": {
+            "type": "string"
+          },
+          "empleadoasignado": {
+            "type": "string"
+          },
+          "fechaadquisicion": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "vidautil": {
+            "type": "number"
+          },
+          "depreciacionanual": {
+            "type": "number"
+          },
+          "depreciacionmensual": {
+            "type": "number"
+          },
+          "valoractual": {
+            "type": "number"
+          },
+          "metodo": {
+            "type": "string"
+          },
+          "clasificacion": {
+            "type": "string"
+          },
+          "empleadosId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "descripcion",
+          "valorinicial"
+        ],
+        "additionalProperties": false,
+        "x-typescript-type": "Activosfijos"
+      },
+      "ActivosfijosWithRelations": {
+        "title": "ActivosfijosWithRelations",
+        "type": "object",
+        "description": "(tsType: ActivosfijosWithRelations, schemaOptions: { includeRelations: true })",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "descripcion": {
+            "type": "string"
+          },
+          "valorinicial": {
+            "type": "number"
+          },
+          "estado": {
+            "type": "boolean"
+          },
+          "ubicacion": {
+            "type": "string"
+          },
+          "empleadoasignado": {
+            "type": "string"
+          },
+          "fechaadquisicion": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "vidautil": {
+            "type": "number"
+          },
+          "depreciacionanual": {
+            "type": "number"
+          },
+          "depreciacionmensual": {
+            "type": "number"
+          },
+          "valoractual": {
+            "type": "number"
+          },
+          "metodo": {
+            "type": "string"
+          },
+          "clasificacion": {
+            "type": "string"
+          },
+          "empleadosId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "descripcion",
+          "valorinicial"
+        ],
+        "additionalProperties": false,
+        "x-typescript-type": "ActivosfijosWithRelations"
+      },
+      "ActivosfijosPartial": {
+        "title": "ActivosfijosPartial",
+        "type": "object",
+        "description": "(tsType: Partial<Activosfijos>, schemaOptions: { partial: true })",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "descripcion": {
+            "type": "string"
+          },
+          "valorinicial": {
+            "type": "number"
+          },
+          "estado": {
+            "type": "boolean"
+          },
+          "ubicacion": {
+            "type": "string"
+          },
+          "empleadoasignado": {
+            "type": "string"
+          },
+          "fechaadquisicion": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "vidautil": {
+            "type": "number"
+          },
+          "depreciacionanual": {
+            "type": "number"
+          },
+          "depreciacionmensual": {
+            "type": "number"
+          },
+          "valoractual": {
+            "type": "number"
+          },
+          "metodo": {
+            "type": "string"
+          },
+          "clasificacion": {
+            "type": "string"
+          },
+          "empleadosId": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "Partial<Activosfijos>"
+      },
+      "Depreciacion": {
+        "title": "Depreciacion",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "activofijo": {
+            "type": "string"
+          },
+          "valorinicial": {
+            "type": "number"
+          },
+          "vidautil": {
+            "type": "number"
+          },
+          "depreciacionmensual": {
+            "type": "number"
+          },
+          "depreciacionanual": {
+            "type": "number"
+          },
+          "valoractual": {
+            "type": "number"
+          },
+          "depreciaciontotal": {
+            "type": "number"
+          },
+          "fechaadquisicion": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "comentario": {
+            "type": "string"
+          },
+          "metodo": {
+            "type": "string"
+          },
+          "descripcion": {
+            "type": "string"
+          },
+          "activosfijosId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "activofijo",
+          "valorinicial",
+          "vidautil"
+        ],
+        "additionalProperties": false
+      },
+      "NewDepreciacion": {
+        "title": "NewDepreciacion",
+        "type": "object",
+        "description": "(tsType: Depreciacion, schemaOptions: { title: 'NewDepreciacion' })",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "activofijo": {
+            "type": "string"
+          },
+          "valorinicial": {
+            "type": "number"
+          },
+          "vidautil": {
+            "type": "number"
+          },
+          "depreciacionmensual": {
+            "type": "number"
+          },
+          "depreciacionanual": {
+            "type": "number"
+          },
+          "valoractual": {
+            "type": "number"
+          },
+          "depreciaciontotal": {
+            "type": "number"
+          },
+          "fechaadquisicion": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "comentario": {
+            "type": "string"
+          },
+          "metodo": {
+            "type": "string"
+          },
+          "descripcion": {
+            "type": "string"
+          },
+          "activosfijosId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "activofijo",
+          "valorinicial",
+          "vidautil"
+        ],
+        "additionalProperties": false,
+        "x-typescript-type": "Depreciacion"
+      },
+      "DepreciacionWithRelations": {
+        "title": "DepreciacionWithRelations",
+        "type": "object",
+        "description": "(tsType: DepreciacionWithRelations, schemaOptions: { includeRelations: true })",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "activofijo": {
+            "type": "string"
+          },
+          "valorinicial": {
+            "type": "number"
+          },
+          "vidautil": {
+            "type": "number"
+          },
+          "depreciacionmensual": {
+            "type": "number"
+          },
+          "depreciacionanual": {
+            "type": "number"
+          },
+          "valoractual": {
+            "type": "number"
+          },
+          "depreciaciontotal": {
+            "type": "number"
+          },
+          "fechaadquisicion": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "comentario": {
+            "type": "string"
+          },
+          "metodo": {
+            "type": "string"
+          },
+          "descripcion": {
+            "type": "string"
+          },
+          "activosfijosId": {
+            "type": "string"
+          },
+          "activosfijos": {
+            "$ref": "#/components/schemas/ActivosfijosWithRelations"
+          }
+        },
+        "required": [
+          "activofijo",
+          "valorinicial",
+          "vidautil"
+        ],
+        "additionalProperties": false,
+        "x-typescript-type": "DepreciacionWithRelations"
+      },
+      "DepreciacionPartial": {
+        "title": "DepreciacionPartial",
+        "type": "object",
+        "description": "(tsType: Partial<Depreciacion>, schemaOptions: { partial: true })",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "activofijo": {
+            "type": "string"
+          },
+          "valorinicial": {
+            "type": "number"
+          },
+          "vidautil": {
+            "type": "number"
+          },
+          "depreciacionmensual": {
+            "type": "number"
+          },
+          "depreciacionanual": {
+            "type": "number"
+          },
+          "valoractual": {
+            "type": "number"
+          },
+          "depreciaciontotal": {
+            "type": "number"
+          },
+          "fechaadquisicion": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "comentario": {
+            "type": "string"
+          },
+          "metodo": {
+            "type": "string"
+          },
+          "descripcion": {
+            "type": "string"
+          },
+          "activosfijosId": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "Partial<Depreciacion>"
+      },
+      "Empleados": {
+        "title": "Empleados",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "nombre": {
+            "type": "string"
+          },
+          "apellido": {
+            "type": "string"
+          },
+          "telefono": {
+            "type": "number"
+          },
+          "ubicacion": {
+            "type": "string"
+          },
+          "otro": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "nombre"
+        ],
+        "additionalProperties": false
+      },
+      "NewEmpleados": {
+        "title": "NewEmpleados",
+        "type": "object",
+        "description": "(tsType: Empleados, schemaOptions: { title: 'NewEmpleados' })",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "nombre": {
+            "type": "string"
+          },
+          "apellido": {
+            "type": "string"
+          },
+          "telefono": {
+            "type": "number"
+          },
+          "ubicacion": {
+            "type": "string"
+          },
+          "otro": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "nombre"
+        ],
+        "additionalProperties": false,
+        "x-typescript-type": "Empleados"
+      },
+      "EmpleadosWithRelations": {
+        "title": "EmpleadosWithRelations",
+        "type": "object",
+        "description": "(tsType: EmpleadosWithRelations, schemaOptions: { includeRelations: true })",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "nombre": {
+            "type": "string"
+          },
+          "apellido": {
+            "type": "string"
+          },
+          "telefono": {
+            "type": "number"
+          },
+          "ubicacion": {
+            "type": "string"
+          },
+          "otro": {
+            "type": "string"
+          },
+          "empleadoasignado": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ActivosfijosWithRelations"
+            }
+          }
+        },
+        "required": [
+          "nombre"
+        ],
+        "additionalProperties": false,
+        "x-typescript-type": "EmpleadosWithRelations"
+      },
+      "EmpleadosPartial": {
+        "title": "EmpleadosPartial",
+        "type": "object",
+        "description": "(tsType: Partial<Empleados>, schemaOptions: { partial: true })",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "nombre": {
+            "type": "string"
+          },
+          "apellido": {
+            "type": "string"
+          },
+          "telefono": {
+            "type": "number"
+          },
+          "ubicacion": {
+            "type": "string"
+          },
+          "otro": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "Partial<Empleados>"
+      },
+      "NewActivosfijosInEmpleados": {
+        "title": "NewActivosfijosInEmpleados",
+        "type": "object",
+        "description": "(tsType: @loopback/repository-json-schema#Optional<Omit<Activosfijos, 'id'>, 'empleadosId'>, schemaOptions: { title: 'NewActivosfijosInEmpleados', exclude: [ 'id' ], optional: [ 'empleadosId' ] })",
+        "properties": {
+          "descripcion": {
+            "type": "string"
+          },
+          "valorinicial": {
+            "type": "number"
+          },
+          "estado": {
+            "type": "boolean"
+          },
+          "ubicacion": {
+            "type": "string"
+          },
+          "empleadoasignado": {
+            "type": "string"
+          },
+          "fechaadquisicion": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "vidautil": {
+            "type": "number"
+          },
+          "depreciacionanual": {
+            "type": "number"
+          },
+          "depreciacionmensual": {
+            "type": "number"
+          },
+          "valoractual": {
+            "type": "number"
+          },
+          "metodo": {
+            "type": "string"
+          },
+          "clasificacion": {
+            "type": "string"
+          },
+          "empleadosId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "descripcion",
+          "valorinicial"
+        ],
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository-json-schema#Optional<Omit<Activosfijos, 'id'>, 'empleadosId'>"
+      },
+      "loopback.Count": {
+        "type": "object",
+        "title": "loopback.Count",
+        "x-typescript-type": "@loopback/repository#Count",
+        "properties": {
+          "count": {
+            "type": "number"
+          }
+        }
+      },
+      "Activosfijos.Filter": {
+        "type": "object",
+        "title": "Activosfijos.Filter",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "boolean"
+                  },
+                  "descripcion": {
+                    "type": "boolean"
+                  },
+                  "valorinicial": {
+                    "type": "boolean"
+                  },
+                  "estado": {
+                    "type": "boolean"
+                  },
+                  "ubicacion": {
+                    "type": "boolean"
+                  },
+                  "empleadoasignado": {
+                    "type": "boolean"
+                  },
+                  "fechaadquisicion": {
+                    "type": "boolean"
+                  },
+                  "vidautil": {
+                    "type": "boolean"
+                  },
+                  "depreciacionanual": {
+                    "type": "boolean"
+                  },
+                  "depreciacionmensual": {
+                    "type": "boolean"
+                  },
+                  "valoractual": {
+                    "type": "boolean"
+                  },
+                  "metodo": {
+                    "type": "boolean"
+                  },
+                  "clasificacion": {
+                    "type": "boolean"
+                  },
+                  "empleadosId": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "descripcion",
+                    "valorinicial",
+                    "estado",
+                    "ubicacion",
+                    "empleadoasignado",
+                    "fechaadquisicion",
+                    "vidautil",
+                    "depreciacionanual",
+                    "depreciacionmensual",
+                    "valoractual",
+                    "metodo",
+                    "clasificacion",
+                    "empleadosId"
+                  ],
+                  "example": "id"
+                },
+                "uniqueItems": true
+              }
+            ],
+            "title": "Activosfijos.Fields"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository#Filter<Activosfijos>"
+      },
+      "Activosfijos.Filter1": {
+        "type": "object",
+        "title": "Activosfijos.Filter",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "where": {
+            "title": "Activosfijos.WhereFilter",
+            "type": "object",
+            "additionalProperties": true
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "boolean"
+                  },
+                  "descripcion": {
+                    "type": "boolean"
+                  },
+                  "valorinicial": {
+                    "type": "boolean"
+                  },
+                  "estado": {
+                    "type": "boolean"
+                  },
+                  "ubicacion": {
+                    "type": "boolean"
+                  },
+                  "empleadoasignado": {
+                    "type": "boolean"
+                  },
+                  "fechaadquisicion": {
+                    "type": "boolean"
+                  },
+                  "vidautil": {
+                    "type": "boolean"
+                  },
+                  "depreciacionanual": {
+                    "type": "boolean"
+                  },
+                  "depreciacionmensual": {
+                    "type": "boolean"
+                  },
+                  "valoractual": {
+                    "type": "boolean"
+                  },
+                  "metodo": {
+                    "type": "boolean"
+                  },
+                  "clasificacion": {
+                    "type": "boolean"
+                  },
+                  "empleadosId": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "descripcion",
+                    "valorinicial",
+                    "estado",
+                    "ubicacion",
+                    "empleadoasignado",
+                    "fechaadquisicion",
+                    "vidautil",
+                    "depreciacionanual",
+                    "depreciacionmensual",
+                    "valoractual",
+                    "metodo",
+                    "clasificacion",
+                    "empleadosId"
+                  ],
+                  "example": "id"
+                },
+                "uniqueItems": true
+              }
+            ],
+            "title": "Activosfijos.Fields"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository#Filter<Activosfijos>"
+      },
+      "Depreciacion.ScopeFilter": {
+        "type": "object",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "where": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {},
+                "additionalProperties": true
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "uniqueItems": true
+              }
+            ]
+          },
+          "include": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {},
+              "additionalProperties": true
+            }
+          }
+        },
+        "additionalProperties": false,
+        "title": "Depreciacion.ScopeFilter"
+      },
+      "Depreciacion.IncludeFilter.Items": {
+        "title": "Depreciacion.IncludeFilter.Items",
+        "type": "object",
+        "properties": {
+          "relation": {
+            "type": "string"
+          },
+          "scope": {
+            "$ref": "#/components/schemas/Depreciacion.ScopeFilter"
+          }
+        }
+      },
+      "Depreciacion.Filter": {
+        "type": "object",
+        "title": "Depreciacion.Filter",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "boolean"
+                  },
+                  "activofijo": {
+                    "type": "boolean"
+                  },
+                  "valorinicial": {
+                    "type": "boolean"
+                  },
+                  "vidautil": {
+                    "type": "boolean"
+                  },
+                  "depreciacionmensual": {
+                    "type": "boolean"
+                  },
+                  "depreciacionanual": {
+                    "type": "boolean"
+                  },
+                  "valoractual": {
+                    "type": "boolean"
+                  },
+                  "depreciaciontotal": {
+                    "type": "boolean"
+                  },
+                  "fechaadquisicion": {
+                    "type": "boolean"
+                  },
+                  "comentario": {
+                    "type": "boolean"
+                  },
+                  "metodo": {
+                    "type": "boolean"
+                  },
+                  "descripcion": {
+                    "type": "boolean"
+                  },
+                  "activosfijosId": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "activofijo",
+                    "valorinicial",
+                    "vidautil",
+                    "depreciacionmensual",
+                    "depreciacionanual",
+                    "valoractual",
+                    "depreciaciontotal",
+                    "fechaadquisicion",
+                    "comentario",
+                    "metodo",
+                    "descripcion",
+                    "activosfijosId"
+                  ],
+                  "example": "id"
+                },
+                "uniqueItems": true
+              }
+            ],
+            "title": "Depreciacion.Fields"
+          },
+          "include": {
+            "title": "Depreciacion.IncludeFilter",
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Depreciacion.IncludeFilter.Items"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository#Filter<Depreciacion>"
+      },
+      "Depreciacion.Filter1": {
+        "type": "object",
+        "title": "Depreciacion.Filter",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "where": {
+            "title": "Depreciacion.WhereFilter",
+            "type": "object",
+            "additionalProperties": true
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "boolean"
+                  },
+                  "activofijo": {
+                    "type": "boolean"
+                  },
+                  "valorinicial": {
+                    "type": "boolean"
+                  },
+                  "vidautil": {
+                    "type": "boolean"
+                  },
+                  "depreciacionmensual": {
+                    "type": "boolean"
+                  },
+                  "depreciacionanual": {
+                    "type": "boolean"
+                  },
+                  "valoractual": {
+                    "type": "boolean"
+                  },
+                  "depreciaciontotal": {
+                    "type": "boolean"
+                  },
+                  "fechaadquisicion": {
+                    "type": "boolean"
+                  },
+                  "comentario": {
+                    "type": "boolean"
+                  },
+                  "metodo": {
+                    "type": "boolean"
+                  },
+                  "descripcion": {
+                    "type": "boolean"
+                  },
+                  "activosfijosId": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "activofijo",
+                    "valorinicial",
+                    "vidautil",
+                    "depreciacionmensual",
+                    "depreciacionanual",
+                    "valoractual",
+                    "depreciaciontotal",
+                    "fechaadquisicion",
+                    "comentario",
+                    "metodo",
+                    "descripcion",
+                    "activosfijosId"
+                  ],
+                  "example": "id"
+                },
+                "uniqueItems": true
+              }
+            ],
+            "title": "Depreciacion.Fields"
+          },
+          "include": {
+            "title": "Depreciacion.IncludeFilter",
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Depreciacion.IncludeFilter.Items"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository#Filter<Depreciacion>"
+      },
+      "Empleados.ScopeFilter": {
+        "type": "object",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "where": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {},
+                "additionalProperties": true
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "uniqueItems": true
+              }
+            ]
+          },
+          "include": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {},
+              "additionalProperties": true
+            }
+          }
+        },
+        "additionalProperties": false,
+        "title": "Empleados.ScopeFilter"
+      },
+      "Empleados.IncludeFilter.Items": {
+        "title": "Empleados.IncludeFilter.Items",
+        "type": "object",
+        "properties": {
+          "relation": {
+            "type": "string"
+          },
+          "scope": {
+            "$ref": "#/components/schemas/Empleados.ScopeFilter"
+          }
+        }
+      },
+      "Empleados.Filter": {
+        "type": "object",
+        "title": "Empleados.Filter",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "boolean"
+                  },
+                  "nombre": {
+                    "type": "boolean"
+                  },
+                  "apellido": {
+                    "type": "boolean"
+                  },
+                  "telefono": {
+                    "type": "boolean"
+                  },
+                  "ubicacion": {
+                    "type": "boolean"
+                  },
+                  "otro": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "nombre",
+                    "apellido",
+                    "telefono",
+                    "ubicacion",
+                    "otro"
+                  ],
+                  "example": "id"
+                },
+                "uniqueItems": true
+              }
+            ],
+            "title": "Empleados.Fields"
+          },
+          "include": {
+            "title": "Empleados.IncludeFilter",
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Empleados.IncludeFilter.Items"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository#Filter<Empleados>"
+      },
+      "Empleados.Filter1": {
+        "type": "object",
+        "title": "Empleados.Filter",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "where": {
+            "title": "Empleados.WhereFilter",
+            "type": "object",
+            "additionalProperties": true
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "boolean"
+                  },
+                  "nombre": {
+                    "type": "boolean"
+                  },
+                  "apellido": {
+                    "type": "boolean"
+                  },
+                  "telefono": {
+                    "type": "boolean"
+                  },
+                  "ubicacion": {
+                    "type": "boolean"
+                  },
+                  "otro": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "nombre",
+                    "apellido",
+                    "telefono",
+                    "ubicacion",
+                    "otro"
+                  ],
+                  "example": "id"
+                },
+                "uniqueItems": true
+              }
+            ],
+            "title": "Empleados.Fields"
+          },
+          "include": {
+            "title": "Empleados.IncludeFilter",
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Empleados.IncludeFilter.Items"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository#Filter<Empleados>"
+      },
+      "PingResponse": {
+        "type": "object",
+        "title": "PingResponse",
+        "properties": {
+          "greeting": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "headers": {
+            "type": "object",
+            "properties": {
+              "Content-Type": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": true
+          }
+        }
+      }
+    }
+  }
+}

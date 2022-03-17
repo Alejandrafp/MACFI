@@ -81,6 +81,10 @@ export class Activosfijos extends Entity {
   })
   clasificacion?: string;
 
+  @property({
+    type: 'string',
+  })
+  empleadosId?: string;
 
   constructor(data?: Partial<Activosfijos>) {
     super(data);
