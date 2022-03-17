@@ -1,7 +1,7 @@
 {
   "name": "macfi",
   "version": "0.0.1",
-  "description": "Software para el manejo y gestion de activos fijos",
+  "description": "macfi",
   "keywords": [
     "loopback-application",
     "loopback"
@@ -40,7 +40,7 @@
     "type": "git",
     "url": ""
   },
-  "author": "alejandrafp <82402655+mfunez-1@users.noreply.github.com>",
+  "author": "alejandrafp <44504798+Alejandrafp@users.noreply.github.com>",
   "license": "",
   "files": [
     "README.md",
@@ -55,20 +55,16 @@
     "@loopback/rest": "^11.1.1",
     "@loopback/rest-explorer": "^4.1.1",
     "@loopback/service-proxy": "^4.1.1",
-<<<<<<< Updated upstream
-=======
-    "loopback-connector-mssql": "^3.8.0",
-    "mongodb": "^4.4.1",
->>>>>>> Stashed changes
+    "loopback-connector-mongodb": "^5.6.0",
     "tslib": "^2.0.0"
   },
   "devDependencies": {
     "@loopback/build": "^8.1.1",
-    "source-map-support": "^0.5.21",
+    "@loopback/eslint-config": "^12.0.3",
     "@loopback/testlab": "^4.1.1",
     "@types/node": "^12.20.46",
-    "@loopback/eslint-config": "^12.0.3",
     "eslint": "^8.10.0",
+    "source-map-support": "^0.5.21",
     "typescript": "~4.5.5"
   }
 }
