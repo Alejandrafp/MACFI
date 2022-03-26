@@ -1,3 +1,9 @@
+import {AuthenticationComponent} from '@loopback/authentication';
+import {
+  JWTAuthenticationComponent,
+  SECURITY_SCHEME_SPEC,
+  UserServiceBindings,
+} from '@loopback/authentication-jwt';
 import {BootMixin} from '@loopback/boot';
 import {ApplicationConfig} from '@loopback/core';
 import {
@@ -10,7 +16,9 @@ import {ServiceMixin} from '@loopback/service-proxy';
 import path from 'path';
 import {MySequence} from './sequence';
 
+import {ConnDataSource} from './datasources';
 export {ApplicationConfig};
+
 
 export class MacfiApplication extends BootMixin(
   ServiceMixin(RepositoryMixin(RestApplication)),
@@ -29,6 +37,17 @@ export class MacfiApplication extends BootMixin(
       path: '/explorer',
     });
     this.component(RestExplorerComponent);
+
+
+ // ------ ADD SNIPPET AT THE BOTTOM ---------
+    // Mount authentication system
+    this.component(AuthenticationComponent);
+    // Mount jwt component
+    this.component(JWTAuthenticationComponent);
+    // Bind datasource
+    this.dataSource(ConnDataSource, UserServiceBindings.DATASOURCE_NAME);
+    // ------------- END OF SNIPPET -------------
+
 
     this.projectRoot = __dirname;
     // Customize @loopback/boot Booter Conventions here

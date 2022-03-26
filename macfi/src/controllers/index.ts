@@ -4,3 +4,4 @@ export * from './depreciacion.controller';
 export * from './activosfijos.controller';
 export * from './empleados-activosfijos.controller';
 export * from './depreciacion-activosfijos.controller';
+export * from './user.controller';

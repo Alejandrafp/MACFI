@@ -1,3 +1,4 @@
+import { authenticate } from '@loopback/authentication';
 import {
   Count,
   CountSchema,
@@ -19,7 +20,7 @@ import {
 } from '@loopback/rest';
 import {Depreciacion} from '../models';
 import {DepreciacionRepository} from '../repositories';
-
+@authenticate('jwt')
 export class DepreciacionController {
   constructor(
     @repository(DepreciacionRepository)
